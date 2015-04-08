@@ -1,0 +1,1662 @@
+<environment name="Prod">
+  <!-- Virtual Machine DEFINITIONS -->
+  <Computers>
+    <Computer name="SEA-2500-01" type="WebServer2008" />
+  </Computers>
+  <configuration>
+    <ppaConfig>
+      <server>compassdb.dev.paraport.com</server>
+      <databaseName>COMPASS_DEV_CHRISMC</databaseName>
+      <configSection>Compass</configSection>
+      <role>
+        <application>Compass</application>
+        <name>COMPASS_APPLICATION_ROLE</name>
+        <password>DE80C5271AA9B8E3EDB80033D19E4EB6F1DA50DEB3CD0DE90E864C9C1C4AC1AC</password>
+      </role>
+    </ppaConfig>
+    <ppaConfig>
+      <server>restrictionsdb.dev.paraport.com</server>
+      <databaseName>RESTRICTIONS_DEV_CHRISMC</databaseName>
+      <configSection>Restrictions</configSection>
+    </ppaConfig>	
+    <ppaConfig>
+      <server>SEA-2400-02\DEV</server>
+      <databaseName>MAGNET_DEV_CHRISMC</databaseName>
+      <configSection>Magnet</configSection>
+    </ppaConfig>
+    <ppaConfig>
+      <server>SEA-2400-02\DEV</server>
+      <databaseName>UNION_DEV_TEAMB</databaseName>
+      <configSection>Union</configSection>
+      <role>
+        <application>TradeDesk</application>
+        <name>TRADEDESK_APPLICATION_ROLE</name>
+        <password>04A6AD29D50E55A092D8DB44BBCB003A46DB72461F1798D2B9D7C68306EC4DD1</password>
+      </role>
+      <role>
+        <application>Edison</application>
+        <name>EDISON_APPLICATION_ROLE</name>
+        <password>F928E2D8903F1300D0914B92F2A31FEB0233DCE5BC01B891306E500E84F467B5</password>
+      </role>
+      <role>
+        <application>Argos</application>
+        <name>ARGOS_APPLICATION_ROLE</name>
+        <password>E19473D51F9F80CB8B955ECCEF96EAEAFD6CA7D783A85934CAB831BCCE460DFC</password>
+      </role>
+      <role>
+        <application>Verona</application>
+        <name>VERONA_APPLICATION_ROLE</name>
+        <password>D53C2080D1098FA801E64ED0C6BC54298ADA9F74787850CC857A7B9F8392F643</password>
+      </role>
+    </ppaConfig>
+    <ppaConfig>
+      <server>SEA-2400-06</server>
+      <databaseName>CORTEX_DEV_CHRISMC</databaseName>
+      <configSection>Cortex</configSection>
+    </ppaConfig>
+    <ppaConfig>
+      <server>axiomdb.dev.paraport.com</server>
+      <databaseName>AXIOM_DEV_CHRISMC</databaseName>
+      <configSection>Axiom</configSection>
+      <role>
+        <application>Axiom</application>
+        <name>AXIOM_APPLICATION_ROLE</name>
+        <password>512A983BBD668A9029B85271E0281064247C503929EA07286D38547D962DD504</password>
+      </role>
+    </ppaConfig>
+    <ppaConfig>
+      <server>SEA-2400-02\DEV</server>
+      <databaseName>IMAT_DEV_CHRISMC</databaseName>
+      <configSection>Imat</configSection>
+    </ppaConfig>
+    <ppaConfig>
+      <server>SEA-2400-02\DEV</server>
+      <databaseName>CAM_DEV_CHRISMC</databaseName>
+      <configSection>Cam</configSection>
+    </ppaConfig>
+    <ppaConfig>
+      <server>UTD</server>
+      <databaseName>CAM_REPORT_DEV_CHRISMC</databaseName>
+      <configSection>Cam_Report</configSection>
+      <role>
+        <application>Sentinel</application>
+        <name>SENTINEL_APPLICATION_ROLE</name>
+        <password>3F5742227B9F6DCAE5B22C6D9CAF80C2886303BA6AEE213FD6BD05EA88AFA3C1</password>
+      </role>
+    </ppaConfig>
+    <ppaConfig>
+      <server>SEA-2400-02\DEV</server>
+      <databaseName>PCR_DEV_CHRISMC</databaseName>
+      <configSection>Pcr</configSection>
+    </ppaConfig>
+  </configuration>
+  <applicationPools>
+    <applicationPool name="AccountAllocationsServicePool" serviceAccount="PARAPORT\ArgosAccountSvcDev" password="76492d1116743f0423413b16050a5345MgB8AEYAOQBzAEQAbgBIACsAZABhAGgANgA0ADkANwAyAGQAbQBVAFIAaQBqAFEAPQA9AHwAOABiADAAOQAzAGUAMQAxADAANgA5ADcAYgA4ADEAMgBhAGYANgBiADAAZQAwADAANABhAGQAMwA3ADkAYgBhADIAMABlADMANwBmAGMANwAxADYAYwA3ADQAYwA3AGIANABlADUAMwAyADQAMQA1AGUANwAxAGYAZQBjAGUAYQA=" />
+    <applicationPool name="ArgosAccountServicePool" serviceAccount="PARAPORT\ArgosAccountSvcDev" password="76492d1116743f0423413b16050a5345MgB8AEYAOQBzAEQAbgBIACsAZABhAGgANgA0ADkANwAyAGQAbQBVAFIAaQBqAFEAPQA9AHwAOABiADAAOQAzAGUAMQAxADAANgA5ADcAYgA4ADEAMgBhAGYANgBiADAAZQAwADAANABhAGQAMwA3ADkAYgBhADIAMABlADMANwBmAGMANwAxADYAYwA3ADQAYwA3AGIANABlADUAMwAyADQAMQA1AGUANwAxAGYAZQBjAGUAYQA=" />
+    <applicationPool name="ArgosActivityServicePool" serviceAccount="PARAPORT\ArgosActivitySvcDev" password="76492d1116743f0423413b16050a5345MgB8AHgAawB6AC8AYgA5AEcARgBEAGcAVwBGAEwANAA3AHUAbgA5AG8AUAB1AEEAPQA9AHwAMABlADkAYwA5ADgANgBiAGYAOABiADgANQAwAGQAZQA1AGMAMQA3ADQAZQAyADUAYgBiADYAZAA2AGMAMwBmADcAMABiAGUAZAAyAGIAMgA2ADkAOAA3ADEAZQAyADIANgA5AGYAOABiADEANwAyADYAZABkAGIAYwAwADMANQA=" />
+    <applicationPool name="BenchmarkServicePool" serviceAccount="PARAPORT\BenchmarkServiceDev" password="76492d1116743f0423413b16050a5345MgB8ADcATQA2AEYATwA0AGcASABMAHgAbQA5AFgAcwB5AEwARgBLAGcAcwBLAFEAPQA9AHwANAA1AGMAMgA4AGQANAA2AGEAZAA5ADgAMwA4ADcANgBhADIANAA0ADAAMwBhADgAYQA0ADUAMQA1ADAAZABhADYANQA0ADQAYQBhAGQAOQAyADIAYgA0ADkAMwA3ADIAMgA1AGIAOABmAGMANwA1ADgAMgAyADcANQBlADEAMQA=" />
+    <applicationPool name="CompassWebPool" serviceAccount="PARAPORT\CompassWCFDev" password="76492d1116743f0423413b16050a5345MgB8AEoAOQBSAGsANgBBAGUAegBpAGIALwBxAC8AZQBUAFAATQBkAG8AZAB5AEEAPQA9AHwAMwBiADYAZgAxADMANAAyADcAMAA4ADcAZABhADAAZgA4ADQAZQA1ADQAZgA4ADkAOQA3AGEAYQA3ADAANwBjADMAMwBiAGMAMgA1ADMAMwAzAGYAYgA1ADgAOABkAGIAMwBlADYANgA2AGYAZQBlADMAMQAwAGYAYgBlAGMAYwA=" />
+    <applicationPool name="CompassServicePool" serviceAccount="PARAPORT\CompassWCFDev" password="76492d1116743f0423413b16050a5345MgB8AEoAOQBSAGsANgBBAGUAegBpAGIALwBxAC8AZQBUAFAATQBkAG8AZAB5AEEAPQA9AHwAMwBiADYAZgAxADMANAAyADcAMAA4ADcAZABhADAAZgA4ADQAZQA1ADQAZgA4ADkAOQA3AGEAYQA3ADAANwBjADMAMwBiAGMAMgA1ADMAMwAzAGYAYgA1ADgAOABkAGIAMwBlADYANgA2AGYAZQBlADMAMQAwAGYAYgBlAGMAYwA=" />
+    <applicationPool name="DroneServicePool" serviceAccount="PARAPORT\droneservicedev" password="76492d1116743f0423413b16050a5345MgB8AEYAMQBlAEcAQwBYAEoAYwArAGIAZwBSAHgAdABQAGwAVgBIAHcAcQAyAHcAPQA9AHwAZgAzADgAZgBiADcAMQA1AGQANQBiADcAZgAyADUAYQBkADUAZgBkAGUANABiADUANwAxADgAYgAwAGEAYwBkAGMAOQBkADkAMAA0AGMAYQAzADgAZABlAGEANgBjADMAOAAxADcAOABhAGMANgAwADIAYQBkADMAOQBhADAAMQA=" />
+    <applicationPool name="EdisonMarketDataServicePool" serviceAccount="PARAPORT\EdisonMDSvcDev" password="76492d1116743f0423413b16050a5345MgB8AGoAbQArAHcATQBWAEIAWgBSAFcAdQBiAFEAVgB6AG0AWABxAHEAdwBoAHcAPQA9AHwANAAyAGQANgAxADYANQAwADEAMwA2AGIANgBmADgANQAwAGIAOQA2AGEAOQA4ADEAMwBjADUAMgBmAGEAMQAwAGMAOAA0ADEAMAA1AGUAYQBkADgAZQBhAGEAMABmAGYAYwAyADQAMwA5AGYANAA2AGMAMgBmADcAYwBjADgAZQA=" />
+    <applicationPool name="EdisonRiskDataServicePool" serviceAccount="PARAPORT\EdisonRDSvcSup" password="76492d1116743f0423413b16050a5345MgB8AE8ATgBUAHEAWgBJADQASgBHAHgAWgBGAHAAbwB0AFQAegBqAHIAdgB0AFEAPQA9AHwAZQBmAGEANgAzADYANABmADAAMQBmADYAYgA1AGEANwBkADEAZgBhAGUAMQBkADIAYgBhAGIAOAA3AGEANwAzADYAYQA0ADYAYgA1ADAAZQA3ADkANwAyADcANgA2ADMAOQBkADkANQA1AGMAMQA1ADMAMABiAGMAZgA1ADQANgA=" />
+    <applicationPool name="EmailServicePool" serviceAccount="PARAPORT\EmailServiceDev" password="76492d1116743f0423413b16050a5345MgB8AHAAcQByAHgAMwBPAEIATgBRAHUAZQBDAEsANwByAHYAYQArAG8ANQB0AFEAPQA9AHwAYgBmADkANQA5ADcAMgBiAGYANwA4ADQAYgA3ADIANgBkADQAMgA1ADAAZQA5AGYAMwBhAGEAMwBiAGIANwAyADkAZQBkAGUAMgBkAGEAMQAwAGYAMQAyAGQAZgA2ADUANgA2ADUANQA0AGUANwAwADkAOABiADUAZgA0ADcANAA=" />
+    <applicationPool name="FINServicePool" serviceAccount="PARAPORT\ArgosWCFDev" password="76492d1116743f0423413b16050a5345MgB8AFIAVAByADQAQwA2ADEAWABBAHkAMgBuADMAagBaAGYAUwBrADQAUgAyAFEAPQA9AHwAYQBhAGEAMgAxAGEAMQAxADIANwAyAGEAYwBmADgAMgAzADQANAA0ADQANwA5AGQAYQA5ADkAYgAyAGYAYgA2AA==" />
+    <applicationPool name="FixedIncomeServicePool" serviceAccount="PARAPORT\AlexServiceDev" password="76492d1116743f0423413b16050a5345MgB8AFIASwBZAFgAdQBLAEsANgBrADYAawBkAFYATAAvAG0AQQBHADkAUgBPAFEAPQA9AHwANgBjADcAMwA1ADkAYwAwADgANABjAGYANQA4ADYAMQAxADEAZAAwADAAOQA5ADkAYQBjADgAOQBjADQAMQAyAA==" />
+    <applicationPool name="FountWebPool" serviceAccount="paraport\FountService" password="76492d1116743f0423413b16050a5345MgB8AEsAbAB1AFYAcQBvADMAUgBkAFkAVQBDAFoAcAB6AFUAUwBQAEcAcgA4AEEAPQA9AHwAZAA5AGEAOQBiAGEANQBiAGYANgA0ADEAMgAxADQAOQA2ADEAMwBiADEANwBlADEAMQBiADYAZABlADcAMQAzADMAZAA1ADMANAA0ADYAOABiADMANQAwADQAZAA2AGYAZQA3ADQANwA3AGQANwBjAGUAMAA2ADAAMgA1ADMAZAA=" />
+    <applicationPool name="ImatAdminWebServicePool" serviceAccount="PARAPORT\ImatWebAdminDev" password="76492d1116743f0423413b16050a5345MgB8AG4AUwBRAHEAbABLAHQAUQBEAHkAUgB5AHMARwBVAGwAOAByADgAZABWAFEAPQA9AHwAMgAzAGIAZgA2ADIAZQBmADYAMABmAGYAMABlADAAZABmADUAZgBhADMANgBkADEANgBkAGEAMQBhAGMAZAA5ADEAMAAzADMAYwA1ADAAYwA0ADMAOABlADEAYgAzADUANwBjADcAZgAzAGUANABjAGUAMwBjADUANABlADAANQA=" />
+    <applicationPool name="MagnetServicePool" serviceAccount="PARAPORT\MagnetSvcDev" password="76492d1116743f0423413b16050a5345MgB8AGUAbgBTAFAARABhADIAcQBiAEQAQQBNAE0ARQBMAGoAMgB2AEgAQgBGAEEAPQA9AHwANgBjADYAOQA3ADEAMgBjAGUAOQBmAGUAZgA5AGIANQA3ADQAMQAwAGYAYwA3AGQAMAAzADYAZgA3ADEAMgBhADkAZgAzADYANQA4ADIAZgA5ADAANAA1ADcANAAyAGMANQA3ADcANgAzADMAYgAyADUAZQBhAGYAOABiAGUAZQA=" />
+    <applicationPool name="MagnetFXWebPool" serviceAccount="PARAPORT\MagnetSvcDev" password="76492d1116743f0423413b16050a5345MgB8AGUAbgBTAFAARABhADIAcQBiAEQAQQBNAE0ARQBMAGoAMgB2AEgAQgBGAEEAPQA9AHwANgBjADYAOQA3ADEAMgBjAGUAOQBmAGUAZgA5AGIANQA3ADQAMQAwAGYAYwA3AGQAMAAzADYAZgA3ADEAMgBhADkAZgAzADYANQA4ADIAZgA5ADAANAA1ADcANAAyAGMANQA3ADcANgAzADMAYgAyADUAZQBhAGYAOABiAGUAZQA=" />
+    <applicationPool name="PCRStatusWebPool" serviceAccount="PARAPORT\QSSWebUserDev" password="76492d1116743f0423413b16050a5345MgB8AG4AUwBRAHEAbABLAHQAUQBEAHkAUgB5AHMARwBVAGwAOAByADgAZABWAFEAPQA9AHwAMgAzAGIAZgA2ADIAZQBmADYAMABmAGYAMABlADAAZABmADUAZgBhADMANgBkADEANgBkAGEAMQBhAGMAZAA5ADEAMAAzADMAYwA1ADAAYwA0ADMAOABlADEAYgAzADUANwBjADcAZgAzAGUANABjAGUAMwBjADUANABlADAANQA=" />
+    <applicationPool name="PCRWebPool" serviceAccount="PARAPORT\PcrService" password="76492d1116743f0423413b16050a5345MgB8AHoAdgB3ADEAZQBLAFoAYwB3AEkARAB4ACsAaABPAHYAWABjAHcAZwAyAEEAPQA9AHwAMQA4AGIAMwA1AGIANwAyADUAMwAxADQAYgAxAGYANwBjAGYAMwA3ADQAMQBjAGUAZQA3AGYANQA4ADkANABkADAAOQA2ADUANwA4ADQAMABiADEAMgAxAGEANQBiAGMANwA2ADIAZgBmADAAYwA3ADAANgAzAGIAZgBkADgAYgA=" />
+    <applicationPool name="PhoenixServicePool" serviceAccount="PARAPORT\PhoenixServiceDev" password="76492d1116743f0423413b16050a5345MgB8AFMAZwB6AGYANQBLAHcAZQBmAG0AcQBJADIAVQBuAFgAbwBzAEgAUAB3AEEAPQA9AHwAYQA4AGYAYQAwADIAZgA5AGUAYgBmADIANgA4AGMAZgBkADMAYwBhAGYANgBkADMAZQBkAGEAZQA2ADAAYwBkAGMAZAAyAGMAZgAwADcAYgBkAGIAYwAwAGEAMQBhAGUAMgA0AGYANgA3ADMAMQAwADgAYwA1AGYAZABiADIAZQA=" />
+    <applicationPool name="QuicksilverWebPool" serviceAccount="PARAPORT\QSSWebUserDev" password="76492d1116743f0423413b16050a5345MgB8AG4AUwBRAHEAbABLAHQAUQBEAHkAUgB5AHMARwBVAGwAOAByADgAZABWAFEAPQA9AHwAMgAzAGIAZgA2ADIAZQBmADYAMABmAGYAMABlADAAZABmADUAZgBhADMANgBkADEANgBkAGEAMQBhAGMAZAA5ADEAMAAzADMAYwA1ADAAYwA0ADMAOABlADEAYgAzADUANwBjADcAZgAzAGUANABjAGUAMwBjADUANABlADAANQA=" />
+    
+	<applicationPool name="RestrictionServicePool"        serviceAccount="PARAPORT\ArgosAccountSvcDev" password="76492d1116743f0423413b16050a5345MgB8AEYAOQBzAEQAbgBIACsAZABhAGgANgA0ADkANwAyAGQAbQBVAFIAaQBqAFEAPQA9AHwAOABiADAAOQAzAGUAMQAxADAANgA5ADcAYgA4ADEAMgBhAGYANgBiADAAZQAwADAANABhAGQAMwA3ADkAYgBhADIAMABlADMANwBmAGMANwAxADYAYwA3ADQAYwA3AGIANABlADUAMwAyADQAMQA1AGUANwAxAGYAZQBjAGUAYQA=" />
+    <applicationPool name="SextantServicePool"            serviceAccount="paraport\SextantServiceDev"  password="76492d1116743f0423413b16050a5345MgB8AEIAVwBPAEsASABEAFYAUABvAFAAMwBXAFkAVQBjADQALwBhADkAUABCAEEAPQA9AHwAMwBkADQAOABlADAANgBlAGEAMQA5AGEANQBiADAANwA0AGEAMwBmAGIAYwA2ADUAZQA0AGMANABkADQAYQA1ADQANQA5ADkAYwBlAGIAZgA4ADgAZgA5ADMAOQBlAGUAZQBhAGMAZAA5ADMAMwA0ADAAZQAyADQANgA0ADcAOQA=" />
+	
+	<!-- Encrypt-PpaPassword -password Ent3r5@ndm@n -->
+	<applicationPool name="RestrictionsManagementPool" serviceAccount="paraport\RestrictionsServiceD"  password="76492d1116743f0423413b16050a5345MgB8AFQAWgBzAG8AcgBKAGIANwB1AG4ARABPAFgAaQBBAEkAVQBIADMAcgBsAHcAPQA9AHwANQAyAGMAMwBlADQAMgBhADQANwBiADMANQA1AGMAMwA1ADMAMwAyADUAYQA3ADEAMgA4ADUAMQBlAGQAZAA4ADY AOQBhADYANQA3ADcANgAwADYANgAwADMANQA2AGIAYwBiADAANwA3ADMAMABhADAANABlADAAMABiADYAYQA="/>
+	
+    <applicationPool name="AxiomServicePool"           serviceAccount="PARAPORT\AxiomSvcDev"            password="76492d1116743f0423413b16050a5345MgB8AEoAOQBSAGsANgBBAGUAegBpAGIALwBxAC8AZQBUAFAATQBkAG8AZAB5AEEAPQA9AHwAMwBiADYAZgAxADMANAAyADcAMAA4ADcAZABhADAAZgA4ADQAZQA1ADQAZgA4ADkAOQA3AGEAYQA3ADAANwBjADMAMwBiAGMAMgA1ADMAMwAzAGYAYgA1ADgAOABkAGIAMwBlADYANgA2AGYAZQBlADMAMQAwAGYAYgBlAGMAYwA=" />
+    <applicationPool name="TradeDeskServicePool" serviceAccount="PARAPORT\TradeDeskServiceDev" password="76492d1116743f0423413b16050a5345MgB8AEoAOQBSAGsANgBBAGUAegBpAGIALwBxAC8AZQBUAFAATQBkAG8AZAB5AEEAPQA9AHwAMwBiADYAZgAxADMANAAyADcAMAA4ADcAZABhADAAZgA4ADQAZQA1ADQAZgA4ADkAOQA3AGEAYQA3ADAANwBjADMAMwBiAGMAMgA1ADMAMwAzAGYAYgA1ADgAOABkAGIAMwBlADYANgA2AGYAZQBlADMAMQAwAGYAYgBlAGMAYwA=" />
+    <applicationPool name="VeronaReportsServicePool" serviceAccount="PARAPORT\VeronaRepSvcDev" password="76492d1116743f0423413b16050a5345MgB8AEgAUABDAG0ARgBVAEIALwBNAEUAdABJAGwANwByAGEAVgBrAFIATAA5AHcAPQA9AHwAMwA2ADgANwA3AGUAMQAxADMAYwAzAGIANABiADEAYQBjADUAZAAzADcAOQBjADkAMAA0ADcAOABkADgAMwBiAGUAOQAwADIANgAxADYAOQA0ADkAZQA3AGIAZAAzADcANAA2AGEANABkADgANwA1AGUAMQBhADkAYwA1ADMAMwA=" />
+  </applicationPools>
+  <applications>
+    <!-- ENVIRONMENT DEFINITIONS -->
+    <application name="PPA.Config" appID="PPA.Config" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Config</physicalDirectory>
+          <ApplicationExe>PPA.Config.exe</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <!-- IIS SERVER DEFINITIONS -->
+    <application name="Fount" appID="Fount" type="WebSite">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\Fount</physicalDirectory>
+          <applicationPool>FountWebPool</applicationPool>
+          <authenticationType>None</authenticationType>
+          <configFileAction>leave</configFileAction>
+          <rootWebSiteName>fount</rootWebSiteName>
+          <FullyQualifiedDomainName>fount.paraport.com</FullyQualifiedDomainName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\Fount</physicalDirectory>
+          <applicationPool>FountWebPool</applicationPool>
+          <authenticationType>None</authenticationType>
+          <configFileAction>leave</configFileAction>
+          <rootWebSiteName>fount</rootWebSiteName>
+          <FullyQualifiedDomainName>fount.paraport.com</FullyQualifiedDomainName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+
+    <application name="Magnet" appID="Magnet" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\MagnetService</physicalDirectory>
+          <virtualDirectory>MagnetService</virtualDirectory>
+          <applicationPool>MagnetServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>Replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+      <queues>
+        <queue id="1" path="FormatName:LZ_SERVER\private$\oa_in" name="LZ Order Adapter In Queue" description="LZ Order Adapter In Queue" queue_type="MSMQ" />
+        <queue id="2" path="FormatName:LZ_SERVER\private$\oa_out" name="LZ Order Adapter Out Queue" description="LZ Order Adapter Out Queue" queue_type="MSMQ" />
+        <queue id="3" path="FormatName:LZ_SERVER\private$\ea_out" name="LZ Execution Adapter Out Queue" description="LZ Execution Adapter Out Queue" queue_type="MSMQ" />
+        <queue id="4" path="FormatName:LZ_SERVER\private$\ea_in" name="LZ Execution Adapter In Queue" description="LZ Execution Adapter In Queue" queue_type="MSMQ" />
+      </queues>
+    </application>
+    <application name="MagnetFXWeb" appID="MagnetFXWeb" type="WebSite">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\MagnetFXWeb</physicalDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>MagnetFXWebPool</applicationPool>
+          <configFileAction>replace</configFileAction>
+          <designation>Primary</designation>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="Axiom.Services" appID="Axiom" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\AxiomService</physicalDirectory>
+          <virtualDirectory>AxiomService</virtualDirectory>
+          <applicationPool>AxiomServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="Hermes" appID="Hermes" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\EmailService</physicalDirectory>
+          <virtualDirectory>EmailService</virtualDirectory>
+          <applicationPool>EmailServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="CompassWebService" appID="Compass" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\SecurityDataService</physicalDirectory>
+          <virtualDirectory>SecurityDataService</virtualDirectory>
+          <applicationPool>CompassServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+	
+	<application name="Sextant" appID="Sextant" type="WebSite">
+		<targetMachines>
+			<targetMachine>
+				<machineName>SEA-2500-01</machineName>
+				<physicalDirectory>C:\Services\Sextant</physicalDirectory>
+				<virtualDirectory>Sextant</virtualDirectory>
+				<applicationPool>SextantServicePool</applicationPool>
+				<authenticationType>Windows</authenticationType>
+				<authenticationMode>NTLM</authenticationMode>			
+				<anonymousUser>
+					<account>paraport\SextantServiceDev</account>
+					<password>76492d1116743f0423413b16050a5345MgB8AEIAVwBPAEsASABEAFYAUABvAFAAMwBXAFkAVQBjADQALwBhADkAUABCAEEAPQA9AHwAMwBkADQAOABlADAANgBlAGEAMQA5AGEANQBiADAANwA0AGEAMwBmAGIAYwA2ADUAZQA0AGMANABkADQAYQA1ADQANQA5ADkAYwBlAGIAZgA4ADgAZgA5ADMAOQBlAGUAZQBhAGMAZAA5ADMAMwA0ADAAZQAyADQANgA0ADcAOQA=</password>
+				              
+				</anonymousUser>
+				<configFileAction>replace</configFileAction>
+				<designation>Primary</designation>
+			</targetMachine>
+		</targetMachines>
+	</application>
+	
+	<application name="RestrictionsManagement" appID="RestrictionsManagement" type="WebSite">
+		<targetMachines>
+			<targetMachine>			
+				<machineName>SEA-2500-01</machineName>
+				<physicalDirectory>C:\Services\Restrictions</physicalDirectory>
+				<virtualDirectory>Restrictions</virtualDirectory>
+				<applicationPool>RestrictionsManagementPool</applicationPool>
+				<authenticationType>Windows</authenticationType>
+				<authenticationMode>NTLM</authenticationMode>			
+				<anonymousUser>
+					<account>paraport\RestrictionsServiceD</account>
+					<password>76492d1116743f0423413b16050a5345MgB8AFQAWgBzAG8AcgBKAGIANwB1AG4ARABPAFgAaQBBAEkAVQBIADMAcgBsAHcAPQA9AHwANQAyAGMAMwBlADQAMgBhADQANwBiADMANQA1AGMAMwA1ADMAMwAyADUAYQA3ADEAMgA4ADUAMQBlAGQAZAA4ADY AOQBhADYANQA3ADcANgAwADYANgAwADMANQA2AGIAYwBiADAANwA3ADMAMABhADAANABlADAAMABiADYAYQA=</password>
+				</anonymousUser>
+				<configFileAction>replace</configFileAction>
+				<designation>Primary</designation>
+			</targetMachine>
+		</targetMachines>
+	</application>	
+	
+	
+    <application name="VeronaReports" appID="VeronaReports" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\VeronaReportsService</physicalDirectory>
+          <virtualDirectory>VeronaReportsService</virtualDirectory>
+          <applicationPool>VeronaReportsServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="Phoenix" appID="Phoenix" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\PhoenixService</physicalDirectory>
+          <virtualDirectory>PhoenixService</virtualDirectory>
+          <applicationPool>PhoenixServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\PhoenixService</physicalDirectory>
+          <virtualDirectory>PhoenixService</virtualDirectory>
+          <applicationPool>PhoenixServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+      <queues>
+        <queue id="6" path="PPA-Quicksilver-Scenario-Status" name="PPA-Quicksilver-Scenario-Status" description="Quicksilver Scenario Status Queue" queue_type="SQS" />
+        <queue id="7" path="PPA-Quicksilver-Scenario-Post" name="PPA-Quicksilver-Scenario-Post" description="Quicksilver Scenario Post Queue" queue_type="SQS" />
+        <queue id="8" path="PPA-Quicksilver-User-{0}-Optimization" name="PPA-Quicksilver-User-Optimization" description="Quicksilver User Optimization Queue" queue_type="SQS" />
+      </queues>
+    </application>
+    <application name="PhoenixPosting" appID="PhoenixPosting" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\PhoenixPostingService</physicalDirectory>
+          <virtualDirectory>PhoenixPostingService</virtualDirectory>
+          <applicationPool>PhoenixServicePool</applicationPool>
+          <authenticationType>None</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="FixedIncomeService" appID="FixedIncomeService" type="WCFService">
+      <!--Alexandria-->
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\FixedIncomeService</physicalDirectory>
+          <virtualDirectory>FixedIncomeService</virtualDirectory>
+          <applicationPool>FixedIncomeServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="FixedIncomeNotificationService" appID="FixedIncomeNotificationService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\FINService</physicalDirectory>
+          <virtualDirectory>FINService</virtualDirectory>
+          <applicationPool>FINServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="ArgosAccountService" appID="ArgosAccountService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\ArgosAccountService</physicalDirectory>
+          <virtualDirectory>ArgosAccountService</virtualDirectory>
+          <applicationPool>ArgosAccountServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="ArgosActivityService" appID="ArgosActivityService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\ArgosActivityService</physicalDirectory>
+          <virtualDirectory>ArgosActivityService</virtualDirectory>
+          <applicationPool>ArgosActivityServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="RestrictionService" appID="RestrictionService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\RestrictionService</physicalDirectory>
+          <virtualDirectory>RestrictionService</virtualDirectory>
+          <applicationPool>RestrictionServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="AccountAllocationsService" appID="AccountAllocationsService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\AccountAllocationsService</physicalDirectory>
+          <virtualDirectory>AccountAllocationsService</virtualDirectory>
+          <applicationPool>AccountAllocationsServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="BenchmarkService" appID="BenchmarkService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\BenchmarkService</physicalDirectory>
+          <virtualDirectory>BenchmarkService</virtualDirectory>
+          <applicationPool>BenchmarkServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\BenchmarkService</physicalDirectory>
+          <virtualDirectory>BenchmarkService</virtualDirectory>
+          <applicationPool>BenchmarkServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\services\BenchmarkService</physicalDirectory>
+          <virtualDirectory>BenchmarkService</virtualDirectory>
+          <applicationPool>BenchmarkServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\BenchmarkService</physicalDirectory>
+          <virtualDirectory>BenchmarkService</virtualDirectory>
+          <applicationPool>BenchmarkServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="EdisonMarketDataService" appID="EdisonMarketDataService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\EdisonMarketDataService</physicalDirectory>
+          <virtualDirectory>EdisonMarketDataService</virtualDirectory>
+          <applicationPool>EdisonMarketDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\EdisonMarketDataService</physicalDirectory>
+          <virtualDirectory>EdisonMarketDataService</virtualDirectory>
+          <applicationPool>EdisonMarketDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\services\EdisonMarketDataService</physicalDirectory>
+          <virtualDirectory>EdisonMarketDataService</virtualDirectory>
+          <applicationPool>EdisonMarketDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\EdisonMarketDataService</physicalDirectory>
+          <virtualDirectory>EdisonMarketDataService</virtualDirectory>
+          <applicationPool>EdisonMarketDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="EdisonRiskDataService" appID="EdisonRiskDataService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\EdisonRiskDataService</physicalDirectory>
+          <virtualDirectory>EdisonRiskDataService</virtualDirectory>
+          <applicationPool>EdisonRiskDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\EdisonRiskDataService</physicalDirectory>
+          <virtualDirectory>EdisonRiskDataService</virtualDirectory>
+          <applicationPool>EdisonRiskDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\services\EdisonRiskDataService</physicalDirectory>
+          <virtualDirectory>EdisonRiskDataService</virtualDirectory>
+          <applicationPool>EdisonRiskDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\EdisonRiskDataService</physicalDirectory>
+          <virtualDirectory>EdisonRiskDataService</virtualDirectory>
+          <applicationPool>EdisonRiskDataServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="TradeDeskService" appID="TradeDeskService" type="WCFService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\TradeDeskService</physicalDirectory>
+          <virtualDirectory>TradeDeskService</virtualDirectory>
+          <applicationPool>TradeDeskServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\TradeDeskService</physicalDirectory>
+          <virtualDirectory>TradeDeskService</virtualDirectory>
+          <applicationPool>TradeDeskServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\services\TradeDeskService</physicalDirectory>
+          <virtualDirectory>TradeDeskService</virtualDirectory>
+          <applicationPool>TradeDeskServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\services\TradeDeskService</physicalDirectory>
+          <virtualDirectory>TradeDeskService</virtualDirectory>
+          <applicationPool>TradeDeskServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="CompassWeb" appID="CompassWeb" type="WebSite">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\CompassWeb</physicalDirectory>
+          <virtualDirectory>CompassWeb</virtualDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>CompassWebPool</applicationPool>
+          <anonymousUser>
+            <account>PARAPORT\CompassWCF</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AFkANQAvAG0AYgBvAEYAcgBUAHMAQwBrAGEARQB6AC8AcAB1AEMAWAB6AFEAPQA9AHwAOABiADQAZQBlADQANQBiAGYANQA0ADgAOQA5AGIANgBkADEAMQA1ADUANwBhADIAZQBiADQANgAzADMAMwBlADgAZgA5ADAANgAxADcAYwAyAGUAZABkAGMAOQA5ADIAMgA1ADAAMAA4ADYANwBmADUAZAA1AGUAMgA2AGYANAA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\CompassWeb</physicalDirectory>
+          <virtualDirectory>CompassWeb</virtualDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>CompassWebPool</applicationPool>
+          <anonymousUser>
+            <account>PARAPORT\CompassWCF</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AFkANQAvAG0AYgBvAEYAcgBUAHMAQwBrAGEARQB6AC8AcAB1AEMAWAB6AFEAPQA9AHwAOABiADQAZQBlADQANQBiAGYANQA0ADgAOQA5AGIANgBkADEAMQA1ADUANwBhADIAZQBiADQANgAzADMAMwBlADgAZgA5ADAANgAxADcAYwAyAGUAZABkAGMAOQA5ADIAMgA1ADAAMAA4ADYANwBmADUAZAA1AGUAMgA2AGYANAA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\CompassWeb</physicalDirectory>
+          <virtualDirectory>CompassWeb</virtualDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>CompassWebPool</applicationPool>
+          <anonymousUser>
+            <account>PARAPORT\CompassWCF</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AFkANQAvAG0AYgBvAEYAcgBUAHMAQwBrAGEARQB6AC8AcAB1AEMAWAB6AFEAPQA9AHwAOABiADQAZQBlADQANQBiAGYANQA0ADgAOQA5AGIANgBkADEAMQA1ADUANwBhADIAZQBiADQANgAzADMAMwBlADgAZgA5ADAANgAxADcAYwAyAGUAZABkAGMAOQA5ADIAMgA1ADAAMAA4ADYANwBmADUAZAA1AGUAMgA2AGYANAA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\CompassWeb</physicalDirectory>
+          <virtualDirectory>CompassWeb</virtualDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>CompassWebPool</applicationPool>
+          <anonymousUser>
+            <account>PARAPORT\CompassWCF</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AFkANQAvAG0AYgBvAEYAcgBUAHMAQwBrAGEARQB6AC8AcAB1AEMAWAB6AFEAPQA9AHwAOABiADQAZQBlADQANQBiAGYANQA0ADgAOQA5AGIANgBkADEAMQA1ADUANwBhADIAZQBiADQANgAzADMAMwBlADgAZgA5ADAANgAxADcAYwAyAGUAZABkAGMAOQA5ADIAMgA1ADAAMAA4ADYANwBmADUAZAA1AGUAMgA2AGYANAA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <!--<application name="ImatUserWeb" appID="ImatUserWeb" type="WebSite" >
+            <targetMachines>
+                <targetMachine>
+                    <machineName></machineName>
+                    <physicalDirectory>C:\Services\IMAT_User</physicalDirectory>
+                    <externalDirectories>
+                        <externalDirectory></externalDirectory>
+                    </externalDirectories>
+                    <virtualDirectory>IMAT_User</virtualDirectory>
+                    <authenticationType>None</authenticationType>
+                    <applicationPool>ImatUserWebServicePool</applicationPool>
+                    <anonymousUser>
+                        <account>paraport\ImatWebUser</account>
+                        <password></password>
+                    </anonymousUser>
+                    <configFileAction>replace</configFileAction>
+                </targetMachine>
+            </targetMachines>
+        </application>-->
+    <application name="ImatAdminWeb" appID="ImatAdminWeb" type="WebSite">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\IMAT_Admin</physicalDirectory>
+          <virtualDirectory>imat_admin</virtualDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>ImatAdminWebServicePool</applicationPool>
+          <anonymousUser>
+            <account>paraport\ImatWebAdmin</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHYAZABWAHoAOABEADkAUgA1AE8AQQBmAEUARAAzAEQARQBFAEYAcQA1AEEAPQA9AHwAOQA3AGQAYQBhADgAYwBlADMANgAwADcAMwA0AGYANAAwAGUANwAxADgAZQA3ADYANQA3ADMANQAwAGEAMwA5ADQAZgAwAGEANgBlADUANAA2ADUAYQAyADMAYgBjADkAZAA2AGIANAAyADQAMwBkAGIAMAAzAGQAMwBkADAANgA1ADEAMgA1ADcAMQA5ADEAMABjAGYAZAA5AGMAMQAxADUANwA4AGMAYQA3ADUAYgBiADYAZABkAGEANgA3ADEA</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\IMAT_Admin</physicalDirectory>
+          <virtualDirectory>imat_admin</virtualDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>ImatAdminWebServicePool</applicationPool>
+          <anonymousUser>
+            <account>paraport\ImatWebAdmin</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHYAZABWAHoAOABEADkAUgA1AE8AQQBmAEUARAAzAEQARQBFAEYAcQA1AEEAPQA9AHwAOQA3AGQAYQBhADgAYwBlADMANgAwADcAMwA0AGYANAAwAGUANwAxADgAZQA3ADYANQA3ADMANQAwAGEAMwA5ADQAZgAwAGEANgBlADUANAA2ADUAYQAyADMAYgBjADkAZAA2AGIANAAyADQAMwBkAGIAMAAzAGQAMwBkADAANgA1ADEAMgA1ADcAMQA5ADEAMABjAGYAZAA5AGMAMQAxADUANwA4AGMAYQA3ADUAYgBiADYAZABkAGEANgA3ADEA</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\IMAT_Admin</physicalDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>ImatAdminWebServicePool</applicationPool>
+          <anonymousUser>
+            <account>paraport\ImatWebAdmin</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHYAZABWAHoAOABEADkAUgA1AE8AQQBmAEUARAAzAEQARQBFAEYAcQA1AEEAPQA9AHwAOQA3AGQAYQBhADgAYwBlADMANgAwADcAMwA0AGYANAAwAGUANwAxADgAZQA3ADYANQA3ADMANQAwAGEAMwA5ADQAZgAwAGEANgBlADUANAA2ADUAYQAyADMAYgBjADkAZAA2AGIANAAyADQAMwBkAGIAMAAzAGQAMwBkADAANgA1ADEAMgA1ADcAMQA5ADEAMABjAGYAZAA5AGMAMQAxADUANwA4AGMAYQA3ADUAYgBiADYAZABkAGEANgA3ADEA</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+          <rootWebSiteName>imatadmin</rootWebSiteName>
+          <FullyQualifiedDomainName>imatadmin.paraport.com</FullyQualifiedDomainName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\IMAT_Admin</physicalDirectory>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>ImatAdminWebServicePool</applicationPool>
+          <anonymousUser>
+            <account>paraport\ImatWebAdmin</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHYAZABWAHoAOABEADkAUgA1AE8AQQBmAEUARAAzAEQARQBFAEYAcQA1AEEAPQA9AHwAOQA3AGQAYQBhADgAYwBlADMANgAwADcAMwA0AGYANAAwAGUANwAxADgAZQA3ADYANQA3ADMANQAwAGEAMwA5ADQAZgAwAGEANgBlADUANAA2ADUAYQAyADMAYgBjADkAZAA2AGIANAAyADQAMwBkAGIAMAAzAGQAMwBkADAANgA1ADEAMgA1ADcAMQA5ADEAMABjAGYAZAA5AGMAMQAxADUANwA4AGMAYQA3ADUAYgBiADYAZABkAGEANgA3ADEA</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+          <rootWebSiteName>imatadmin</rootWebSiteName>
+          <FullyQualifiedDomainName>imatadmin.paraport.com</FullyQualifiedDomainName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="PCRStatusWeb" appID="PCRStatusWeb" type="WebSite">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\PCRStatusWeb</physicalDirectory>
+          <virtualDirectory>PCRStatusWeb</virtualDirectory>
+          <authenticationType>None</authenticationType>
+          <applicationPool>PCRStatusWebPool</applicationPool>
+          <anonymousUser>
+            <account>PARAPORT\DevOpsWeb</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AEQAMABBADUAVwA4AFkATgAyADYALwBOAHkALwB5ADQAcwB6AEUAYwBUAGcAPQA9AHwAMwA0ADMAMgBiADkAYQA5AGUANAA3ADkAZQAwAGYAOAAxADEANQA1ADgAZQA2ADYANQA5AGUAOAA3ADUAYgA0ADAANwBlADIANwA4AGYAMAAwAGYANwAxADgAZQA1ADAAZAA5ADQANwA0AGMAZQA2ADMANAA3ADcANwBiAGIAYQA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\PCRStatusWeb</physicalDirectory>
+          <virtualDirectory>PCRStatusWeb</virtualDirectory>
+          <authenticationType>None</authenticationType>
+          <applicationPool>PCRStatusWebPool</applicationPool>
+          <anonymousUser>
+            <account>PARAPORT\DevOpsWeb</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AEQAMABBADUAVwA4AFkATgAyADYALwBOAHkALwB5ADQAcwB6AEUAYwBUAGcAPQA9AHwAMwA0ADMAMgBiADkAYQA5AGUANAA3ADkAZQAwAGYAOAAxADEANQA1ADgAZQA2ADYANQA5AGUAOAA3ADUAYgA0ADAANwBlADIANwA4AGYAMAAwAGYANwAxADgAZQA1ADAAZAA5ADQANwA0AGMAZQA2ADMANAA3ADcANwBiAGIAYQA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="PcrWeb" appID="PcrWeb" type="WebSite">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\PcrWeb</physicalDirectory>
+          <wcfAddress>http://parametric.directtechnology.com/ReportManagementService</wcfAddress>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>PCRWebPool</applicationPool>
+          <configFileAction>replace</configFileAction>
+          <designation>Secondary</designation>
+          <rootWebSiteName>PCRWeb</rootWebSiteName>
+          <FullyQualifiedDomainName>pcr.paraport.com</FullyQualifiedDomainName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\PcrWeb</physicalDirectory>
+          <wcfAddress>http://parametric.directtechnology.com/ReportManagementService</wcfAddress>
+          <authenticationType>disableAnon</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <applicationPool>PCRWebPool</applicationPool>
+          <configFileAction>replace</configFileAction>
+          <designation>Primary</designation>
+          <rootWebSiteName>PCRWeb</rootWebSiteName>
+          <FullyQualifiedDomainName>pcr.paraport.com</FullyQualifiedDomainName>
+        </targetMachine>
+      </targetMachines>
+      <configFileTransform>
+        <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+          <system.web>
+            <authorization>
+              <allow users="paraport\PCR Users,paraport\PCRAdmin,PARAPORT\PCR Bulk" xdt:Transform="Replace" />
+            </authorization>
+          </system.web>
+          <appSettings>
+            <add key="PPA.PCR.Web.UserRoles" value="PARAPORT\PCRAdmin,PARAPORT\PCR Users,PARAPORT\PCR Bulk,PARAPORT\Application Support" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="PPA.PCR.Web.BulkRoles" value="PARAPORT\PCR Bulk" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+          </appSettings>
+        </configuration>
+      </configFileTransform>
+    </application>
+    <application name="PcrSchedulerService" appID="PcrSchedulerService" type="WindowsService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <serviceName>PPA.Pcr.SchedulerService</serviceName>
+          <serviceAccount>paraport\PcrService</serviceAccount>
+          <password>76492d1116743f0423413b16050a5345MgB8AFkATwBFAFkARQByAHYAWABEAGwAZgA0AHoANgBUAFcAUgBNAFgAQQA4AFEAPQA9AHwAZAAxADIAZQA1AGEANgAxADMAZQA3ADIAMQAwADIANgBjADMAZgBhADUAZQBiADkANABmAGQANgAxADQAYgAyAGQAZQA0ADcAZgAyAGIAZABjADcANwA1ADAAOAA0AGYANABlADIAMQAyADMANAAyAGEAOQBhADMANAA4ADAAMQA=</password>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PCR Scheduler Service</physicalDirectory>
+          <configFileAction>replace</configFileAction>
+          <serviceStartupType>auto</serviceStartupType>
+          <designation>Primary</designation>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <serviceName>PPA.Pcr.SchedulerService</serviceName>
+          <serviceAccount>paraport\PcrService</serviceAccount>
+          <password>76492d1116743f0423413b16050a5345MgB8AFkATwBFAFkARQByAHYAWABEAGwAZgA0AHoANgBUAFcAUgBNAFgAQQA4AFEAPQA9AHwAZAAxADIAZQA1AGEANgAxADMAZQA3ADIAMQAwADIANgBjADMAZgBhADUAZQBiADkANABmAGQANgAxADQAYgAyAGQAZQA0ADcAZgAyAGIAZABjADcANwA1ADAAOAA0AGYANABlADIAMQAyADMANAAyAGEAOQBhADMANAA4ADAAMQA=</password>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PCR Scheduler Service</physicalDirectory>
+          <configFileAction>replace</configFileAction>
+          <serviceStartupType>disabled</serviceStartupType>
+          <designation>Secondary</designation>
+        </targetMachine>
+      </targetMachines>
+      <configFileTransform>
+        <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+          <appSettings>
+            <add key="PPA.PCR.Reports.QuickLetter.Directory" value="\\paraport\departments\Marketing\Quickletters" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="PPA.PCR.Reports.Quarterly.Directory" value="\\paraport\departments\Marketing\Quarterly Reports\pcr" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="QuickLetter.EmailFrom" value="Parametric Client Services&lt;reporting@paraport.com&gt;" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="QuickLetter.EmailCC" value="" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="QuickLetter.EmailBCC" value="pcr@paraport.com" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="Quarterly.EmailFrom" value="Parametric Client Services&lt;reporting@paraport.com&gt;" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="Quarterly.EmailCC" value="" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+            <add key="Quarterly.EmailBCC" value="pcr@paraport.com" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+          </appSettings>
+        </configuration>
+      </configFileTransform>
+      <queues>
+        <queue id="9" path="FormatName:LZ_SERVER\private$\pcrjobqueue" name="PPA.PCR.SchedulerService.JobQueue.Path" description="PCR Report Scheduling Queue" queue_type="MSMQ" />
+      </queues>
+    </application>
+    <application name="SSRS" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files\Microsoft SQL Server\MSSQL\Reporting Services\ReportServer\bin\PPA</physicalDirectory>
+          <designation>Primary</designation>
+          <ApplicationExe>PPA.PCR.Reporting.dll</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="QuicksilverWeb" appID="QuicksilverWeb" type="WebSite">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\QuicksilverWeb</physicalDirectory>
+          <virtualDirectory>QuicksilverWeb</virtualDirectory>
+          <authenticationType>None</authenticationType>
+          <applicationPool>QuicksilverWebPool</applicationPool>
+          <anonymousUser>
+            <account>paraport\QSSWebUser</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHkAMAAxAGMAcwA2AGoAQQBiAGoAWgAxAGUAYQBEAFcAagBOAGIAbQBUAHcAPQA9AHwAMQBmADIAMQA0AGYAYQA0ADEAYgA4ADMAMQA5ADUAZgBmADMANgAzADEANQA1ADEAOQA3AGMAYwBhADAAOAA2AGQAYwBhADkAYQA2ADcAZgA0ADUAZABlAGYAMwA2ADMAYQBkAGYAZgA2ADcAZgAxADQAYwA3AGMAYwBjAGMAYgA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\QuicksilverWeb</physicalDirectory>
+          <virtualDirectory>QuicksilverWeb</virtualDirectory>
+          <authenticationType>None</authenticationType>
+          <applicationPool>QuicksilverWebPool</applicationPool>
+          <anonymousUser>
+            <account>paraport\QSSWebUser</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHkAMAAxAGMAcwA2AGoAQQBiAGoAWgAxAGUAYQBEAFcAagBOAGIAbQBUAHcAPQA9AHwAMQBmADIAMQA0AGYAYQA0ADEAYgA4ADMAMQA5ADUAZgBmADMANgAzADEANQA1ADEAOQA3AGMAYwBhADAAOAA2AGQAYwBhADkAYQA2ADcAZgA0ADUAZABlAGYAMwA2ADMAYQBkAGYAZgA2ADcAZgAxADQAYwA3AGMAYwBjAGMAYgA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Primary</designation>
+          <physicalDirectory>C:\Services\QuicksilverWeb</physicalDirectory>
+          <virtualDirectory>QuicksilverWeb</virtualDirectory>
+          <authenticationType>None</authenticationType>
+          <applicationPool>QuicksilverWebPool</applicationPool>
+          <anonymousUser>
+            <account>paraport\QSSWebUser</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHkAMAAxAGMAcwA2AGoAQQBiAGoAWgAxAGUAYQBEAFcAagBOAGIAbQBUAHcAPQA9AHwAMQBmADIAMQA0AGYAYQA0ADEAYgA4ADMAMQA5ADUAZgBmADMANgAzADEANQA1ADEAOQA3AGMAYwBhADAAOAA2AGQAYwBhADkAYQA2ADcAZgA0ADUAZABlAGYAMwA2ADMAYQBkAGYAZgA2ADcAZgAxADQAYwA3AGMAYwBjAGMAYgA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <designation>Secondary</designation>
+          <physicalDirectory>C:\Services\QuicksilverWeb</physicalDirectory>
+          <virtualDirectory>QuicksilverWeb</virtualDirectory>
+          <authenticationType>None</authenticationType>
+          <applicationPool>QuicksilverWebPool</applicationPool>
+          <anonymousUser>
+            <account>paraport\QSSWebUser</account>
+            <password>76492d1116743f0423413b16050a5345MgB8AHkAMAAxAGMAcwA2AGoAQQBiAGoAWgAxAGUAYQBEAFcAagBOAGIAbQBUAHcAPQA9AHwAMQBmADIAMQA0AGYAYQA0ADEAYgA4ADMAMQA5ADUAZgBmADMANgAzADEANQA1ADEAOQA3AGMAYwBhADAAOAA2AGQAYwBhADkAYQA2ADcAZgA0ADUAZABlAGYAMwA2ADMAYQBkAGYAZgA2ADcAZgAxADQAYwA3AGMAYwBjAGMAYgA=</password>
+          </anonymousUser>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <!-- APPLICATION SERVER DEFINITIONS -->
+    <application name="Chronos" appID="Chronos" type="Chronos">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <serviceName>PPA.Chronos</serviceName>
+          <serviceAccount>paraport\ChronosService</serviceAccount>
+          <password>76492d1116743f0423413b16050a5345MgB8AHkAMAAxAGMAcwA2AGoAQQBiAGoAWgAxAGUAYQBEAFcAagBOAGIAbQBUAHcAPQA9AHwAMQBmADIAMQA0AGYAYQA0ADEAYgA4ADMAMQA5ADUAZgBmADMANgAzADEANQA1ADEAOQA3AGMAYwBhADAAOAA2AGQAYwBhADkAYQA2ADcAZgA0ADUAZABlAGYAMwA2ADMAYQBkAGYAZgA2ADcAZgAxADQAYwA3AGMAYwBjAGMAYgA=</password>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Chronos</physicalDirectory>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <serviceName>PPA.Chronos</serviceName>
+          <serviceAccount>paraport\ChronosService</serviceAccount>
+          <password>76492d1116743f0423413b16050a5345MgB8AHkAMAAxAGMAcwA2AGoAQQBiAGoAWgAxAGUAYQBEAFcAagBOAGIAbQBUAHcAPQA9AHwAMQBmADIAMQA0AGYAYQA0ADEAYgA4ADMAMQA5ADUAZgBmADMANgAzADEANQA1ADEAOQA3AGMAYwBhADAAOAA2AGQAYwBhADkAYQA2ADcAZgA0ADUAZABlAGYAMwA2ADMAYQBkAGYAZgA2ADcAZgAxADQAYwA3AGMAYwBjAGMAYgA=</password>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Chronos</physicalDirectory>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="ArgosPooledActivityService" appID="ArgosPooledActivityService" type="WindowsService">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <serviceName>PPA.Argos.PooledActivityService</serviceName>
+          <serviceAccount>paraport\mtsuser</serviceAccount>
+          <password>76492d1116743f0423413b16050a5345MgB8AEgAZQA4AFMAZwBYADIAbQBBAEQAMABMAE0ANwB1AHoAOQAwAGEAUwBGAHcAPQA9AHwAZQAzADcAOQAzADcANwA1AGYAMQA2ADIAZQBkADgANgBlADkAZQA3ADcAZAA0AGQAMgA3ADAAYQA3AGMAYwA4AA==</password>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.PooledActivityService</physicalDirectory>
+          <configFileAction>replace</configFileAction>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <serviceName>PPA.Argos.PooledActivityService</serviceName>
+          <serviceAccount>paraport\mtsuser</serviceAccount>
+          <password>76492d1116743f0423413b16050a5345MgB8AEgAZQA4AFMAZwBYADIAbQBBAEQAMABMAE0ANwB1AHoAOQAwAGEAUwBGAHcAPQA9AHwAZQAzADcAOQAzADcANwA1AGYAMQA2ADIAZQBkADgANgBlADkAZQA3ADcAZAA0AGQAMgA3ADAAYQA3AGMAYwA4AA==</password>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.PooledActivityService</physicalDirectory>
+          <configFileAction>replace</configFileAction>
+          <serviceStartupType>disabled</serviceStartupType>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <!-- CA DEFINITIONS -->
+    <application name="PPA.Archive" appID="PPA.Archive" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\Archive</physicalDirectory>
+          <ApplicationExe>Archive.exe</ApplicationExe>
+          <configFileName>Machine.config</configFileName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\Archive</physicalDirectory>
+          <ApplicationExe>Archive.exe</ApplicationExe>
+          <configFileName>Machine.config</configFileName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="IMATCleanArtifacts" appID="IMATCleanArtifacts" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATCleanArtifacts</physicalDirectory>
+          <ApplicationExe>ImatCA.exe</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATCleanArtifacts</physicalDirectory>
+          <ApplicationExe>ImatCA.exe</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="IMATRunPricing" appID="IMATRunPricing" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATRunPricing</physicalDirectory>
+          <ApplicationExe>ImatRP.exe</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATRunPricing</physicalDirectory>
+          <ApplicationExe>ImatRP.exe</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="IMATDailyManagerEmail" appID="IMATDailyManagerEmail" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATDailyManagerEmail</physicalDirectory>
+          <ApplicationExe>ImatDME.exe</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATDailyManagerEmail</physicalDirectory>
+          <ApplicationExe>ImatDME.exe</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="IMATAdventPost" appID="IMATAdventPost" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATAdventPost</physicalDirectory>
+          <ApplicationExe>ImatAP.exe</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATAdventPost</physicalDirectory>
+          <ApplicationExe>ImatAP.exe</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="IMATEODPosition" appID="IMATEODPosition" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATEODPosition</physicalDirectory>
+          <ApplicationExe>ImatEOD.exe</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\IMATEODPosition</physicalDirectory>
+          <ApplicationExe>ImatEOD.exe</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="TaskRunner" appID="TaskRunner" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\ArgosTaskRunner</physicalDirectory>
+          <ApplicationExe>PPA.Argos.ArgosTaskRunner.exe</ApplicationExe>
+          <configFileName>PPA.Argos.ArgosTaskRunner.exe.config</configFileName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\ArgosTaskRunner</physicalDirectory>
+          <ApplicationExe>PPA.Argos.ArgosTaskRunner.exe</ApplicationExe>
+          <configFileName>PPA.Argos.ArgosTaskRunner.exe.config</configFileName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="ArgosReportingSynchronizer" appID="ArgosReportingSynchronizer" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\ArgosReportingSynchronizer</physicalDirectory>
+          <ApplicationExe>ArgSync.exe</ApplicationExe>
+          <configFileName>ArgSync.exe.config</configFileName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\ArgosReportingSynchronizer</physicalDirectory>
+          <ApplicationExe>ArgSync.exe</ApplicationExe>
+          <configFileName>ArgSync.exe.config</configFileName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="Compass.Market.Data.Uploader" appID="Compass.Market.Data.Uploader" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\Compass.Market.Data.Uploader</physicalDirectory>
+          <ApplicationExe>CMDU.exe</ApplicationExe>
+          <configFileName>CMDU.exe.config</configFileName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\Compass.Market.Data.Uploader</physicalDirectory>
+          <ApplicationExe>CMDU.exe</ApplicationExe>
+          <configFileName>CMDU.exe.config</configFileName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="PPA.Bloomberg.FileLoader.Console" appID="PPA.Bloomberg.FileLoader.Console" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Bloomberg.FileLoader.Console</physicalDirectory>
+          <ApplicationExe>BBUpload.exe</ApplicationExe>
+          <configFileName>BBUpload.exe.config</configFileName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Bloomberg.FileLoader.Console</physicalDirectory>
+          <ApplicationExe>BBUpload.exe</ApplicationExe>
+          <configFileName>BBUpload.exe.config</configFileName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="DailySecurityExtract" appID="DailySecurityExtract" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\DailySecurityExtract</physicalDirectory>
+          <ApplicationExe>DSE.exe</ApplicationExe>
+          <configFileName>DSE.exe.config</configFileName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\DailySecurityExtract</physicalDirectory>
+          <ApplicationExe>DSE.exe</ApplicationExe>
+          <configFileName>DSE.exe.config</configFileName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="BenchmarkExtract" appID="BenchmarkExtract" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\Edison Benchmark Extract</physicalDirectory>
+          <ApplicationExe>PPA.Edison.BenchmarkExtract.exe</ApplicationExe>
+          <configFileName>Machine.config</configFileName>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\Edison Benchmark Extract</physicalDirectory>
+          <ApplicationExe>PPA.Edison.BenchmarkExtract.exe</ApplicationExe>
+          <configFileName>Machine.config</configFileName>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <!-- QUICKSILVER DEFINITIONS -->
+    <application name="Quicksilver.Drone" appID="QSDrone" type="QSDrone">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Services\DroneService</physicalDirectory>
+          <virtualDirectory>DroneService</virtualDirectory>
+          <applicationPool>DroneServicePool</applicationPool>
+          <authenticationType>Windows</authenticationType>
+          <authenticationMode>NTLM</authenticationMode>
+          <configFileAction>replace</configFileAction>
+          <pingTargets>
+            <pingTarget service="drone" target="CheckScenarioQueue" />
+          </pingTargets>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <application name="PPA.Occam" appID="PPA.Occam" type="WindowsApp">
+      <targetMachines>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+        <targetMachine>
+          <machineName>SEA-2500-01</machineName>
+          <physicalDirectory>C:\Program Files (x86)\Parametric Portfolio Associates\PPA.Occam</physicalDirectory>
+          <ApplicationExe>PPA.Occam.Analytics.dll</ApplicationExe>
+        </targetMachine>
+      </targetMachines>
+    </application>
+    <!-- SSIS Package DEFINITIONS -->
+    <application name="UnionToCamDataSync" type="SSIS">
+    </application>
+    <application name="UnionToPcrDataSync" type="SSIS">
+    </application>
+    <!-- DATABASE APPLICATION DEFINITIONS -->
+    <application name="CortexDB" appID="CortexDB" type="Database">
+      <configSection>Cortex</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-2400-02\DEV" />
+          <Property name="database" value="CORTEX_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+      <sqlBackupJob>
+      </sqlBackupJob>
+    </application>
+    <application name="UnionDB" appID="UnionDB" type="Database">
+      <configSection>Union</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-2400-02\DEV" />
+          <Property name="database" value="UNION_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+      <caEvents>
+        <!--caEvent>PPD.APPSUP_UNION_ARCHIVETASKS</caEvent> RENAMED TO VALUE BELOW BY INFRASTRUCTURE -->
+        <caEvent>PPD.APPSUP_DEV_UNION_ARCHIVETASKS</caEvent>
+      </caEvents>
+      <sqlJobs>
+        <sqlJob>DTS_UNION</sqlJob>
+        <sqlJob>UnionToCamDataSync</sqlJob>
+        <sqlJob>UnionToPcrDataSync</sqlJob>
+      </sqlJobs>
+      <sqlBackupJob>
+      </sqlBackupJob>
+    </application>
+    <application name="MagnetDB" appID="MagnetDB" type="Database">
+      <configSection>Magnet</configSection>
+      <nant>
+        <Targets>
+          <Target>UPGRADEDB</Target>
+          <Target>_create_jobs</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-2400-02\DEV" />
+          <Property name="database" value="MAGNET_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+      <sqlBackupJob>
+      </sqlBackupJob>
+    </application>
+    <application name="CompassDB" appID="CompassDB" type="Database">
+      <configSection>Compass</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="compassdb.dev.paraport.com" />
+          <Property name="database" value="COMPASS_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+      <sqlBackupJob>
+      </sqlBackupJob>
+    </application>
+    <application name="AxiomDB" appID="AxiomDB" type="Database">
+      <configSection>Axiom</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-2400-02\DEV" />
+          <Property name="database" value="AXIOM_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+      <sqlBackupJob>
+      </sqlBackupJob>
+    </application>
+    <application name="LZDB" appID="LZDB" type="Database">
+      <configSection>
+      </configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-400-20\INSTANCE5" />
+          <Property name="database" value="LZ_PROD" />
+          <Property name="sql_env" value="PROD" />
+        </Properties>
+      </nant>
+    </application>
+    <application name="ImatDB" appID="ImatDB" type="Database">
+      <configSection>Imat</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-2400-02\DEV" />
+          <Property name="database" value="IMAT_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+    </application>
+    <application name="CamDB" appID="CamDB" type="Database">
+      <configSection>Cam</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-2400-02\DEV" />
+          <Property name="database" value="CAM_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+    </application>
+    <application name="CamReportDB" appID="CamReportDB" type="Database">
+      <configSection>CamReport</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="UTD" />
+          <Property name="database" value="UTD" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+    </application>
+    <application name="PcrDB" appID="PcrDB" type="Database">
+      <configSection>Pcr</configSection>
+      <nant>
+        <Targets>
+          <Target>RESTORE UPGRADEDB</Target>
+        </Targets>
+        <Properties>
+          <Property name="sql_server" value="SEA-2400-02\DEV" />
+          <Property name="database" value="PCR_DEV_CHRISMC" />
+          <Property name="sql_env" value="DEV" />
+        </Properties>
+      </nant>
+      <!--sqlBackupJob>Backup Full: PCR_PROD_Rollout</sqlBackupJob-->
+    </application>
+  </applications>
+  <caConfig>
+    <Port>7500</Port>
+    <CliServer>UTD</CliServer>
+    <User>DEVOPS</User>
+    <EncryptedPassword>0XFEBF507F9CFD</EncryptedPassword>
+  </caConfig>
+</environment>

@@ -1,0 +1,922 @@
+<version name="All PPA Services, Production Versions">
+  <!-- CONFIG PROJECT DEFINITIONS -->
+  <application name="PPA.Config">
+    <type>windowsApp</type>
+    <productCode>FCD3CC3C-E1D5-4326-9A22-9F48CFD87FBE</productCode>
+    <teamCity>
+      <projectName>Config</projectName>
+      <buildName>Config.2.5</buildName>
+      <specifiedVersion>2.5.36</specifiedVersion>
+      <applicationInstallFile>PPA.Config.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <!-- ALEXANDRIA PROJECT DEFINITIONS -->
+  <application name="FixedIncomeService">
+    <type>web</type>
+    <teamCity>
+      <projectName>Alexandria</projectName>
+      <buildName>Alexandria.1.8</buildName>
+      <specifiedVersion>1.8.14</specifiedVersion>
+      <applicationInstallFile>Alexandria.WCFService.FixedIncome.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Alexandria.FixedIncome.IFixedIncomeService" serviceFile="FixedIncomeService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- ARCHIVE PROJECT DEFINITIONS -->
+  <application name="PPA.Archive">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Archive</projectName>
+      <buildName>Archive.4.8</buildName>
+      <specifiedVersion>4.8.29</specifiedVersion>
+      <applicationInstallFile>PPA.Archive.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- ARGOS PROJECT DEFINITIONS -->
+  <application name="TaskRunner">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Argos</projectName>
+      <buildName>Argos.6.1</buildName>
+      <specifiedVersion>6.1.5</specifiedVersion>
+      <applicationInstallFile>Argos.ArgosTaskRunner.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>PPA.Argos.ArgosTaskRunner.exe.config</configFile>
+  </application>
+  <application name="ArgosPooledActivityService">
+    <type>service</type>
+    <serviceFile>PPA.Argos.PooledActivityService.exe</serviceFile>
+    <teamCity>
+      <projectName>Argos</projectName>
+      <buildName>Argos.6.1</buildName>
+      <specifiedVersion>6.1.5</specifiedVersion>
+      <applicationInstallFile>Argos.PooledActivityService.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>PPA.Argos.PooledActivityService.exe.config</configFile>
+  </application>
+  <application name="ArgosReportingSynchronizer">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Argos</projectName>
+      <buildName>Argos.6.1</buildName>
+      <specifiedVersion>6.1.5</specifiedVersion>
+      <applicationInstallFile>Argos.ArgosReportingSynchronizer.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>ArgSync.exe.config</configFile>
+  </application>
+  <application name="PPA.Argos">
+    <type>windowsApp</type>
+    <productCode>25E5830D-88E9-4E39-9936-2D1A274A3287</productCode>
+    <teamCity>
+      <projectName>Argos</projectName>
+      <buildName>Argos.6.1</buildName>
+      <specifiedVersion>6.1.5</specifiedVersion>
+      <applicationInstallFile>PPA.Argos.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- ARGOS.SERVICES PROJECT DEFINITIONS -->
+  <application name="AccountAllocationsService">
+    <type>web</type>
+    <teamCity>
+      <projectName>Argos.Services</projectName>
+      <buildName>Argos.Services.6.0</buildName>
+      <specifiedVersion>6.0.11</specifiedVersion>
+      <applicationInstallFile>Argos.WCFService.AccountAllocations.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Argos.AccountAllocationService.IAccountAllocationService" serviceFile="AccountAllocationService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="ArgosAccountService">
+    <type>web</type>
+     <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+   <teamCity>
+      <projectName>Argos.Services</projectName>
+      <buildName>Argos.Services.6.1</buildName>
+      <applicationInstallFile>Argos.WCFService.Accounts.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Argos.ArgosAccountService.IAccountService" serviceFile="AccountService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="ArgosActivityService">
+    <type>web</type>
+    <teamCity>
+      <projectName>Argos.Services</projectName>
+      <buildName>Argos.Services.6.0</buildName>
+      <specifiedVersion>6.0.11</specifiedVersion>
+      <applicationInstallFile>Argos.WCFService.Activities.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Argos.ArgosActivityService.IActivityService" serviceFile="ActivityService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="FixedIncomeNotificationService">
+    <type>web</type>
+    <teamCity>
+      <projectName>Argos.Services</projectName>
+      <buildName>Argos.Services.6.0</buildName>
+      <specifiedVersion>6.0.11</specifiedVersion>
+      <applicationInstallFile>Argos.WCFService.FixedIncomeNotification.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Argos.FixedIncomeNotifications.IFixedIncomeNotificationService" serviceFile="FixedIncomeNotificationService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  
+  
+  <application name="RestrictionService">
+    <type>web</type>
+    <teamCity>
+		<projectName>Argos.Services</projectName>
+		<buildName>Argos.Services.6.1</buildName>
+      <applicationInstallFile>Argos.WCFService.Restrictions.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Argos.RestrictionService.IRestrictionService" serviceFile="RestrictionService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  
+      <application name="RestrictionsManagement">
+        <type>web</type>
+        <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+	<serviceHealth>
+		<path>/Home/About</path>
+		<searchString>PPA.RESTRICTIONS.WEB</searchString>
+	</serviceHealth>
+        <teamCity>
+            <projectName>Restrictions</projectName>
+            <buildName>Restrictions.1.14</buildName>
+            <applicationInstallFile>Restrictions.zip</applicationInstallFile>
+        </teamCity>
+        <services>
+            <service contract="PPA.Restrictions.Web.ManageController" serviceFile="Manage/Index" binding="REST" />
+        </services>
+        <configFile>web.config</configFile>
+    </application>
+	
+  <!-- AXIOM.SERVICES PROJECT DEFINITIONS -->
+  <application name="Axiom.Services">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Axiom.Services</projectName>
+      <buildName>Axiom.Services.Master</buildName>
+      <applicationInstallFile>Axiom.Services.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="Contracts.Axiom.Services.ISecurityDataService" serviceFile="SecurityDataService.svc" binding="webHttpBinding" />
+      <service contract="Contracts.Axiom.Services.ISecuritySettlementService" serviceFile="SecuritySettlementService.svc" binding="webHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="PPA.Bloomberg.FileLoader.Console">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Axiom.Services</projectName>
+      <buildName>Axiom.Services.2.2</buildName>
+      <specifiedVersion>2.2.112</specifiedVersion>
+      <applicationInstallFile>PPA.Bloomberg.FileLoader.Console.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>BBUpload.exe.config</configFile>
+  </application>
+  <!-- CAM PROJECT DEFINITIONS -->
+  <application name="PPA.CAM">
+    <type>windowsApp</type>
+    <productCode>684815F0-3E54-4AA9-8A9D-7512A19BE8C1</productCode>
+    <teamCity>
+      <projectName>Cam</projectName>
+      <buildName>Cam.4.7</buildName>
+      <specifiedVersion>4.7.7</specifiedVersion>
+      <applicationInstallFile>Cam.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- CHRONOS PROJECT DEFINITIONS -->
+  <application name="Chronos">
+    <type>service</type>
+    <serviceFile>PPA.Chronos.Service.exe</serviceFile>
+    <teamCity>
+      <projectName>Chronos</projectName>
+      <buildName>Chronos.1.1</buildName>
+      <specifiedVersion>1.1.20</specifiedVersion>
+      <applicationInstallFile>Chronos.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Chronos.WCFService.TestPing.ITestPingService" serviceFile="TestPingService.svc" binding="webHttpBinding" />
+    </services>
+    <configFile>PPA.Chronos.Service.exe.config</configFile>
+  </application>
+  <!-- CLEON PROJECT DEFINITIONS -->
+  <application name="Cleon">
+    <type>windowsApp</type>
+    <productCode>
+    </productCode>
+    <teamCity>
+      <projectName>Cleon</projectName>
+      <buildName>Cleon.3.3</buildName>
+      <specifiedVersion>3.3.11</specifiedVersion>
+      <applicationInstallFile>Cleon.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- COMPASS PROJECT DEFINITIONS -->
+  <application name="Compass.Market.Data.Uploader">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Compass</projectName>
+      <buildName>Compass.6.2</buildName>
+      <specifiedVersion>6.2.18</specifiedVersion>
+      <applicationInstallFile>Compass.Market.Data.Uploader.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>CMDU.exe.config</configFile>
+  </application>
+  <application name="PPA.Compass.Eod">
+    <type>windowsApp</type>
+    <productCode>7B568F30-C0E1-4016-BF25-C9FB9D04B60B</productCode>
+    <teamCity>
+      <projectName>Compass</projectName>
+      <buildName>Compass.6.2</buildName>
+      <specifiedVersion>6.2.18</specifiedVersion>
+      <applicationInstallFile>PPA.Compass.Eod.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <application name="PPA.Compass">
+    <type>windowsApp</type>
+    <productCode>45B1A3F3-CD24-496F-A1F7-9B6F19F47462</productCode>
+    <teamCity>
+      <projectName>Compass</projectName>
+      <buildName>Compass.6.2</buildName>
+      <specifiedVersion>6.2.18</specifiedVersion>
+      <applicationInstallFile>PPA.Compass.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- COMPASS.WEB PROJECT DEFINITIONS -->
+
+  <!-- CONFIGURATION.GLOBAL PROJECT DEFINITIONS -->
+  <application name="PPA.Configuration.Global">
+    <type>windowsApp</type>
+    <productCode>4C17261F-ABB8-4516-91F5-823608773C1C</productCode>
+    <teamCity>
+      <projectName>Configuration.Global</projectName>
+      <buildName>Configuration.Global.1.2</buildName>
+      <specifiedVersion>1.2.22</specifiedVersion>
+      <applicationInstallFile>PPA.Configuration.Global.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <!-- CONFIGURATION.ILAP PROJECT DEFINITIONS -->
+  <application name="PPA.Configuration.Ilap">
+    <type>windowsApp</type>
+    <productCode>C052C1EC-5F0D-40DD-9F90-D7C25C5668E1</productCode>
+    <teamCity>
+      <projectName>Configuration.Ilap</projectName>
+      <buildName>Configuration.Ilap.1.2</buildName>
+      <specifiedVersion>1.2.23</specifiedVersion>
+      <applicationInstallFile>PPA.Configuration.Ilap.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <!-- DAILYSECURITYEXTRACT PROJECT DEFINITIONS -->
+  <application name="DailySecurityExtract">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>DailySecurityExtract</projectName>
+      <buildName>DailySecurityExtract.1.4</buildName>
+      <specifiedVersion>1.4.16</specifiedVersion>
+      <applicationInstallFile>DailySecurityExtract.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>DSE.exe.config</configFile>
+  </application>
+  <!-- DOMINO PROJECT DEFINITIONS -->
+  <application name="PPA.Domino">
+    <type>windowsApp</type>
+    <productCode>80EACA20-5A2B-4B98-B9D2-DE54003660F7</productCode>
+    <teamCity>
+      <projectName>Domino</projectName>
+      <buildName>Domino.1.6</buildName>
+      <specifiedVersion>1.6.27</specifiedVersion>
+      <applicationInstallFile>PPA.Domino.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <!-- EDISON PROJECT DEFINITIONS -->
+  <application name="BenchmarkExtract">
+    <type>windowsApp</type>
+    <productCode>
+    </productCode>
+    <teamCity>
+      <projectName>Edison</projectName>
+      <buildName>Edison.3.7</buildName>
+      <specifiedVersion>3.7.10</specifiedVersion>
+      <applicationInstallFile>Edison.BenchmarkExtract.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <application name="PPA.Edison">
+    <type>windowsApp</type>
+    <productCode>8A3057DC-A1D5-4BCB-A331-A4F70605C494</productCode>
+    <teamCity>
+      <projectName>Edison</projectName>
+      <buildName>Edison.3.7</buildName>
+      <specifiedVersion>3.7.10</specifiedVersion>
+      <applicationInstallFile>Edison.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- EDISON.SERVICES PROJECT DEFINITIONS -->
+  <application name="BenchmarkService">
+    <type>web</type>
+    <teamCity>
+      <projectName>Edison.Services</projectName>
+      <buildName>Edison.Services.3.0</buildName>
+      <specifiedVersion>3.0.38</specifiedVersion>
+      <applicationInstallFile>Edison.WCFService.BenchmarkData.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Edison.BenchmarkService.IBenchmarkService" serviceFile="BenchmarkService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="EdisonMarketDataService">
+    <type>web</type>
+    <teamCity>
+      <projectName>Edison.Services</projectName>
+      <buildName>Edison.Services.3.0</buildName>
+      <specifiedVersion>3.0.38</specifiedVersion>
+      <applicationInstallFile>Edison.WCFService.MarketData.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Edison.EdisonMarketDataService.IMarketDataService" serviceFile="MarketDataService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="EdisonRiskDataService">
+    <type>web</type>
+    <teamCity>
+      <projectName>Edison.Services</projectName>
+      <buildName>Edison.Services.3.0</buildName>
+      <specifiedVersion>3.0.38</specifiedVersion>
+      <applicationInstallFile>Edison.WCFService.RiskData.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Edison.EdisonRiskDataService.IRiskDataService" serviceFile="RiskDataService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- FOUNT PROJECT DEFINITIONS -->
+  <application name="Fount">
+    <type>web</type>
+    <teamCity>
+      <projectName>Fount</projectName>
+      <buildName>Fount.1.14</buildName>
+      <applicationInstallFile>Fount.zip</applicationInstallFile>
+    </teamCity>
+  </application>
+  <!-- HERMES PROJECT DEFINITIONS -->
+  <application name="Hermes">
+    <type>web</type>
+    <teamCity>
+      <projectName>Hermes</projectName>
+      <buildName>Hermes.1.3</buildName>
+      <specifiedVersion>1.3.48</specifiedVersion>
+      <applicationInstallFile>Hermes.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Hermes.IEmailService" serviceFile="EmailService.svc" binding="streamingHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- IMAT PROJECT DEFINITIONS -->
+  <application name="IMATAdventPost">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Imat</projectName>
+      <buildName>Imat.2.6</buildName>
+      <specifiedVersion>2.6.16</specifiedVersion>
+      <applicationInstallFile>IMAT.Scripts.AdventPost.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>ImatAP.exe.config</configFile>
+  </application>
+  <application name="IMATCleanArtifacts">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Imat</projectName>
+      <buildName>Imat.2.6</buildName>
+      <specifiedVersion>2.6.16</specifiedVersion>
+      <applicationInstallFile>IMAT.Scripts.CleanFileArtifacts.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>ImatCA.exe.config</configFile>
+  </application>
+  <application name="IMATDailyManagerEmail">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Imat</projectName>
+      <buildName>Imat.2.6</buildName>
+      <specifiedVersion>2.6.16</specifiedVersion>
+      <applicationInstallFile>IMAT.Scripts.DailyManagerEmail.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>ImatDME.exe.config</configFile>
+  </application>
+  <application name="IMATEODPosition">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Imat</projectName>
+      <buildName>Imat.2.6</buildName>
+      <specifiedVersion>2.6.16</specifiedVersion>
+      <applicationInstallFile>IMAT.Scripts.EODPosition.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>ImatEOD.exe.config</configFile>
+  </application>
+  <application name="IMATRunPricing">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Imat</projectName>
+      <buildName>Imat.2.6</buildName>
+      <specifiedVersion>2.6.16</specifiedVersion>
+      <applicationInstallFile>IMAT.Scripts.RunPricing.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>ImatRP.exe.config</configFile>
+  </application>
+  <application name="ImatAdminWeb">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Imat</projectName>
+      <buildName>Imat.2.6</buildName>
+      <specifiedVersion>2.6.16</specifiedVersion>
+      <applicationInstallFile>Imat.Web.Admin.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="ImatUserWeb">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Imat</projectName>
+      <buildName>Imat.2.6</buildName>
+      <specifiedVersion>2.6.16</specifiedVersion>
+      <applicationInstallFile>Imat.Web.User.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- MAGNET.SERVICES PROJECT DEFINITIONS -->
+  <application name="Magnet">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Magnet.Services</projectName>
+      <buildName>Magnet.Services.Master</buildName>
+      <applicationInstallFile>Magnet.Services.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Magnet.Services.IMagnetService" serviceFile="MagnetService.svc" binding="webHttpBinding" />
+      <service contract="PPA.Contracts.Magnet.Services.IPostingService" serviceFile="PostingService.svc" binding="webHttpBinding" />
+      <service contract="PPA.Contracts.Magnet.Services.AccountCurrencySettings.IAccountCurrencySettingService" serviceFile="AccountCurrencySettingService.svc" binding="webHttpBinding" />
+      <pingTarget name="ProcessExecutions" serviceFile="magnetservice.svc" urlSuffix="TradeOrders/ProcessedEMSExecutionNotifications" />
+      <pingTarget name="ProcessTradeTicketResponses" serviceFile="magnetservice.svc" urlSuffix="TradeTickets/ProcessEMSResponses" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="MagnetFXWeb">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Magnet.FxWeb</projectName>
+      <buildName>Magnet.FxWeb.Master</buildName>
+      <applicationInstallFile>Magnet.Fx.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- MONTLAKE PROJECT DEFINITIONS -->
+  <application name="PPA.Montlake">
+    <type>windowsApp</type>
+    <productCode>BEC09724-289C-4F8C-91AF-5B6B65D6E668</productCode>
+    <teamCity>
+      <projectName>Montlake</projectName>
+      <buildName>Montlake.3.0</buildName>
+      <specifiedVersion>3.0.28</specifiedVersion>
+      <applicationInstallFile>PPA.Montlake.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- OCCAM PROJECT DEFINITIONS -->
+  <application name="PPA.Occam">
+    <type>windowsApp</type>
+    <productCode>4FC37375-81AB-466B-BE9D-E7DAE4346A77</productCode>
+    <teamCity>
+      <projectName>Occam</projectName>
+      <buildName>Occam.2.3</buildName>
+      <specifiedVersion>2.3.5</specifiedVersion>
+      <applicationInstallFile>PPA.Occam.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <!-- OPAL PROJECT DEFINITIONS -->
+  <application name="PPA.OPAL">
+    <type>windowsApp</type>
+    <productCode>2CF9F08B-16DD-4BB2-8F6F-D5BE7893CCED</productCode>
+    <teamCity>
+      <projectName>Opal</projectName>
+      <buildName>Opal.2.5</buildName>
+      <specifiedVersion>2.5.35</specifiedVersion>
+      <applicationInstallFile>PPA.OPAL.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <!-- PCR PROJECT DEFINITIONS -->
+  <application name="PcrWeb">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Pcr</projectName>
+      <buildName>Pcr.1.9</buildName>
+      <specifiedVersion>1.9.142</specifiedVersion>
+      <applicationInstallFile>Pcr.Web.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>web.config</configFile>
+    <services>
+      <service fixedAddress="True" contract="PPA.ReportingGateway.IReportingServiceGateway" binding="webHttpBinding" />
+    </services>
+  </application>
+  <application name="SSRS">
+    <type>windowsApp</type>
+    <teamCity>
+      <projectName>Pcr</projectName>
+      <buildName>Pcr.1.9</buildName>
+      <specifiedVersion>1.9.142</specifiedVersion>
+      <applicationInstallFile>Pcr.SSRS.zip</applicationInstallFile>
+    </teamCity>
+  </application>
+  <application name="PcrSchedulerService" topShelf="true">
+    <type>service</type>
+    <serviceFile>PPA.Pcr.Scheduler.exe</serviceFile>
+    <teamCity>
+      <projectName>Pcr</projectName>
+      <buildName>Pcr.1.9</buildName>
+      <specifiedVersion>1.9.142</specifiedVersion>
+      <applicationInstallFile>Pcr.Scheduler.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>PPA.Pcr.Scheduler.exe.config</configFile>
+  </application>
+  <!-- PCRSTATUSWEB PROJECT DEFINITIONS -->
+  <application name="PCRStatusWeb">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>PCRStatusWeb</projectName>
+      <buildName>PCRStatusWeb.1.1</buildName>
+      <specifiedVersion>1.1.4</specifiedVersion>
+      <applicationInstallFile>PCRStatusWeb.Support.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- PCW PROJECT DEFINITIONS -->
+  <application name="PPA.PCW">
+    <type>windowsApp</type>
+    <productCode>
+    </productCode>
+    <teamCity>
+      <projectName>PCW</projectName>
+      <buildName>PCW.3.6</buildName>
+      <specifiedVersion>3.6.19</specifiedVersion>
+      <applicationInstallFile>PCW.Installer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- PHOENIX PROJECT DEFINITIONS -->
+  <application name="Phoenix">
+    <type>web</type>
+    <teamCity>
+      <projectName>Phoenix</projectName>
+      <buildName>Phoenix.1.4</buildName>
+      <specifiedVersion>1.4.146</specifiedVersion>
+      <applicationInstallFile>Phoenix.WCFService.ScenarioOptimization.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Phoenix.IScenarioOptimizationService" serviceFile="PhoenixService.svc" binding="webHttpBinding" />
+      <pingTarget name="CheckScenarioStatusQueue" serviceFile="phoenixservice.svc" urlSuffix="CheckScenarioStatusQueue" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <application name="PhoenixPosting">
+    <type>web</type>
+    <teamCity>
+      <projectName>Phoenix</projectName>
+      <buildName>Phoenix.1.4</buildName>
+      <specifiedVersion>1.4.147</specifiedVersion>
+      <applicationInstallFile>Phoenix.WCFService.ScenarioPosting.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Phoenix.IScenarioPostingService" serviceFile="PostingService.svc" binding="webHttpBinding" />
+      <pingTarget name="CheckScenarioPostingQueue" serviceFile="PostingService.svc" urlSuffix="CheckScenarioPostingQueue" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- PCRDB PROJECT DEFINITIONS -->
+  <!-- PCRDB PROJECT DEFINITIONS -->
+  <application name="UnionToPCRDataSync">
+    <type>SSIS</type>
+    <teamCity>
+      <projectName>PcrDB</projectName>
+      <buildName>PcrDB.Trunk</buildName>
+      <specifiedVersion>2.3.42</specifiedVersion>
+      <applicationInstallFile>UnionContactsToPCR.dtsx</applicationInstallFile>
+    </teamCity>
+  </application>
+  <!-- QUICKSILVER PROJECT DEFINITIONS -->
+  <application name="Quicksilver.Drone">
+    <type>web</type>
+    <teamCity>
+      <projectName>Quicksilver</projectName>
+      <buildName>Quicksilver.1.1</buildName>
+      <specifiedVersion>1.1.121</specifiedVersion>
+      <applicationInstallFile>Quicksilver.WCFService.Drone.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service name="drone" contract="PPA.Contracts.Quicksilver.IDroneService" serviceFile="DroneService.svc" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- QUICKSILVER.WEB PROJECT DEFINITIONS -->
+  <application name="QuicksilverWeb">
+    <type>web</type>
+    <teamCity>
+      <projectName>Quicksilver.Web</projectName>
+      <buildName>Quicksilver.Web.Trunk</buildName>
+      <specifiedVersion>1.1.2</specifiedVersion>
+      <applicationInstallFile>Quicksilver.Web.Support.zip</applicationInstallFile>
+    </teamCity>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- REPORTAL PROJECT DEFINITIONS -->
+  <!--
+    <application name="MVCPortal" >
+        <type>web</type>
+        <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+        <reportal>True</reportal>
+        <teamCity>
+            <projectName>Reportal.Test</projectName>
+            <buildName>TestBuildConfig</buildName>
+            <specifiedVersion></specifiedVersion>
+            <applicationInstallFile>ReportalWebSite.zip</applicationInstallFile>
+        </teamCity>
+        <configFile>web.config</configFile>
+    </application>
+
+    <application name="PortalServices">
+        <type>web</type>
+        <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+        <reportal>True</reportal>
+        <teamCity>
+            <projectName>Reportal.Test</projectName>
+            <buildName>TestBuildConfig</buildName>
+            <specifiedVersion></specifiedVersion>
+            <applicationInstallFile>ReportalServices.zip</applicationInstallFile>
+        </teamCity>
+        <services>
+            <service contract = "PPA.ReportingGateway.IReportingServiceGateway" serviceFile = "ReportManagementService" binding = "webHttpBinding" />
+        </services>
+        <configFile>web.config</configFile>
+    </application>
+    
+    <application name="ReportalDB">
+        <type>db</type>
+        <teamCity>
+            <projectName>Reportal.Test</projectName>
+            <buildName>TestBuildConfig</buildName>
+            <specifiedVersion></specifiedVersion>
+            <applicationInstallFile>ReportalDBTool.zip</applicationInstallFile>
+        </teamCity>
+        <workingDirPrefix>C:\dbdeploy\ReportalDB-</workingDirPrefix>
+    </application>
+-->
+  <!-- SEXTANT PROJECT DEFINITIONS --> 
+  <application name="Sextant">
+	<type>web</type>
+	<netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+	<teamCity>
+		<projectName>Sextant</projectName>
+		<buildName>Sextant.Master</buildName>
+		<specifiedVersion></specifiedVersion>
+		<applicationInstallFile>Sextant.zip</applicationInstallFile>
+	</teamCity>
+	<services>
+		<service contract="Sextant.Web.Controllers.PortfolioController" serviceFile="Portfolio" binding = "REST" />
+	</services>
+	<configFile>web.config</configFile>
+</application>
+	
+   <application name="CompassWebService">
+    <type>web</type>
+	<netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Sextant</projectName>
+      <buildName>Sextant.Master</buildName>
+      <applicationInstallFile>Compass.Web.Service.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Compass.ISecurityDataService" serviceFile="SecurityDataService.svc" binding="webHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  
+  <!-- SYMBAL PROJECT DEFINITIONS -->
+  <application name="PPA.Optimizer">
+    <type>windowsApp</type>
+    <productCode>BA67DC7A-8408-4E7D-899A-4A4B344BD3CD</productCode>
+    <teamCity>
+      <projectName>Symbal</projectName>
+      <buildName>Symbal.5.3</buildName>
+      <specifiedVersion>5.3.8</specifiedVersion>
+      <applicationInstallFile>PPA.Optimizer.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>
+    </configFile>
+  </application>
+  <!-- TRADEDESK PROJECT DEFINITIONS -->
+  <application name="PPA.TradeDesk">
+    <type>windowsApp</type>
+    <productCode>A4054357-1E1B-42CE-92A2-A40B9C163451</productCode>
+    <teamCity>
+      <projectName>TradeDesk</projectName>
+      <buildName>TradeDesk.5.1</buildName>
+      <specifiedVersion>5.1.38</specifiedVersion>
+      <applicationInstallFile>PPA.TradeDesk.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <!-- TRADEDESK.SERVICES PROJECT DEFINITIONS -->
+  <application name="TradeDeskService">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>TradeDesk.Services</projectName>
+      <buildName>TradeDesk.Services.1.1</buildName>
+      <specifiedVersion>1.1.45</specifiedVersion>
+      <applicationInstallFile>TradeDesk.Service.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.TradeDesk.ITradeDeskService" serviceFile="TradeDeskService.svc" binding="webHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- UnionToCamDataSync PROJECT DEFINITIONS -->
+  <application name="UnionToCamDataSync">
+    <type>SSIS</type>
+    <teamCity>
+      <projectName>UnionToCamDataSync</projectName>
+      <buildName>UnionToCamDataSync.1.4</buildName>
+      <specifiedVersion>1.4.3</specifiedVersion>
+      <applicationInstallFile>UnionToCam.dtsx</applicationInstallFile>
+    </teamCity>
+  </application>
+  <!-- VERONA PROJECT DEFINITIONS -->
+  <application name="PPA.Verona">
+    <type>windowsApp</type>
+    <productCode>BA842BD0-626D-4A0C-8160-4F78AA4890C7</productCode>
+    <teamCity>
+      <projectName>Verona</projectName>
+      <buildName>Verona.6.5</buildName>
+      <specifiedVersion>6.5.51</specifiedVersion>
+      <applicationInstallFile>PPA.Verona.msi</applicationInstallFile>
+    </teamCity>
+    <configFile>machine.config</configFile>
+  </application>
+  <application name="VeronaReports">
+    <type>web</type>
+    <netFrameworkVersion>v4.0.30319</netFrameworkVersion>
+    <teamCity>
+      <projectName>Verona</projectName>
+      <buildName>Verona.6.5</buildName>
+      <specifiedVersion>6.5.51</specifiedVersion>
+      <applicationInstallFile>Verona.WCFService.Reports.zip</applicationInstallFile>
+    </teamCity>
+    <services>
+      <service contract="PPA.Contracts.Verona.VeronaReportService.IReportService" serviceFile="ReportService.svc" binding="webHttpBinding" />
+    </services>
+    <configFile>web.config</configFile>
+  </application>
+  <!-- DATABASE DEFINITIONS -->
+  <application name="CamReportDB">
+    <type>db</type>
+    <teamCity>
+      <buildName>CamReportDB.trunk</buildName>
+    </teamCity>
+    <svn>
+      <svnPrefix>svn://gary.paraport.com/repos/CamReportDB/</svnPrefix>
+      <workingDirPrefix>C:\dbdeploy\CamReportDB-</workingDirPrefix>
+      <specifiedVersion>trunk</specifiedVersion>
+    </svn>
+  </application>
+  <application name="CamDB">
+    <type>db</type>
+    <teamCity>
+      <projectName>CamDB</projectName>
+      <buildName>CamDB.trunk</buildName>
+      <specifiedVersion>5.2.5</specifiedVersion>
+      <applicationInstallFile>Cam.DB.zip</applicationInstallFile>
+    </teamCity>
+    <workingDirPrefix>C:\dbdeploy\CamDb-</workingDirPrefix>
+  </application>
+  <application name="LZDB">
+    <type>db</type>
+    <teamCity>
+      <buildName>LZDB.trunk</buildName>
+    </teamCity>
+    <svn>
+      <svnPrefix>svn://gary.paraport.com/repos/LZDB/</svnPrefix>
+      <workingDirPrefix>C:\dbdeploy\LZDB-</workingDirPrefix>
+      <specifiedVersion>trunk</specifiedVersion>
+    </svn>
+  </application>
+  <application name="MagnetDB">
+    <type>db</type>
+    <teamCity>
+      <projectName>MagnetDB.Migrate</projectName>
+      <buildName>MagnetDB.Migrate.2.1</buildName>
+      <specifiedVersion>2.1.8</specifiedVersion>
+      <applicationInstallFile>Magnet.DB.zip</applicationInstallFile>
+    </teamCity>
+    <workingDirPrefix>C:\dbdeploy\MagnetDB-</workingDirPrefix>
+  </application>
+  <application name="PcrDB">
+    <type>db</type>
+    <teamCity>
+      <projectName>PcrDB</projectName>
+      <buildName>PcrDB.Trunk</buildName>
+      <specifiedVersion>2.3.42</specifiedVersion>
+      <applicationInstallFile>Pcr.DB.zip</applicationInstallFile>
+    </teamCity>
+    <workingDirPrefix>C:\dbdeploy\PcrDB-</workingDirPrefix>
+  </application>
+  <application name="UnionDB">
+    <type>db</type>
+    <teamCity>
+      <projectName>UnionDB.Migrate</projectName>
+      <buildName>UnionDB.Migrate.16.1</buildName>
+      <specifiedVersion>16.1.11</specifiedVersion>
+      <applicationInstallFile>Union.DB.zip</applicationInstallFile>
+    </teamCity>
+    <workingDirPrefix>C:\dbdeploy\UnionDB-</workingDirPrefix>
+  </application>
+  <application name="CortexDB">
+    <type>db</type>
+    <teamCity>
+      <projectName>CortexDB.Migrate</projectName>
+      <buildName>CortexDB.Migrate.2.3</buildName>
+      <specifiedVersion>2.3.5</specifiedVersion>
+      <applicationInstallFile>Cortex.DB.zip</applicationInstallFile>
+    </teamCity>
+    <workingDirPrefix>C:\dbdeploy\CortexDB-</workingDirPrefix>
+  </application>
+  <application name="ImatDB">
+    <type>db</type>
+    <teamCity>
+      <buildName>ImatDB.trunk</buildName>
+    </teamCity>
+    <svn>
+      <svnPrefix>svn://gary.paraport.com/repos/ImatDB/</svnPrefix>
+      <workingDirPrefix>C:\dbdeploy\ImatDB-</workingDirPrefix>
+      <specifiedVersion>trunk</specifiedVersion>
+    </svn>
+  </application>
+  <application name="CompassDB">
+    <type>db</type>
+    <teamCity>
+      <projectName>CompassDB.Migrate</projectName>
+      <buildName>CompassDB.Migrate.3.1</buildName>
+      <applicationInstallFile>Compass.DB.zip</applicationInstallFile>
+    </teamCity>
+    <workingDirPrefix>C:\dbdeploy\CompassDB-</workingDirPrefix>
+  </application>
+  <application name="AxiomDB">
+    <type>db</type>
+    <teamCity>
+      <projectName>AxiomDB.Migrate</projectName>
+      <buildName>AxiomDB.Migrate.2.2</buildName>
+      <specifiedVersion>2.2.10</specifiedVersion>
+      <applicationInstallFile>Axiom.DB.zip</applicationInstallFile>
+    </teamCity>
+    <workingDirPrefix>C:\dbdeploy\AxiomDb-</workingDirPrefix>
+  </application>
+</version>

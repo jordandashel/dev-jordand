@@ -1,0 +1,1 @@
+ Get-ChildItem -Path C:\Windows\Microsoft.NET -Filter machine.config -recurse | foreach { np $_.FullName }
