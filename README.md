@@ -7,12 +7,19 @@ The purpose of this repo is to provide some utilities for managing the personal 
 
 Clone this repository to your favorite source directory. Edit the various config files so that they match your environment. You may alternatively wish to use let Chef generate these config files for you. 
 
+## First Time Setup
+
 1. Execute Publish.ps1 to push your config files to the various .NET Framework directories on your local machine.
 2. Execute Open-MachineConfigs.ps1* to open all of the machine configs found on your machine.
 3. Edit the machine configs to repoint the various configSections to the externalized config files
 
      &lt;connectionStrings configSource="connectionStrings.config" />
 
+## Editing configs later
+
+1. Add, remove, or modify whatever settings you wish.
+2. Execute Publish.ps1
+3. commit-push your changes to github.
 
 * Open-MachineConfigs.ps1 assumes you use the alias 'np' to refer to NotePad++. You can change 'np' to Open-File to use the default text editor on your machine.
 
