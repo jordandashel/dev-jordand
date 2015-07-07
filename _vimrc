@@ -31,6 +31,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
+Plugin 'Townk/vim-autoclose'
+Plugin 'vim-scripts/closetag.vim'
 "Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
